@@ -1,0 +1,194 @@
+.hidden{
+
+  opacity:0;
+
+  transform:translateY(50px);
+
+  transition:
+  opacity 0.8s ease,
+  transform 0.8s ease;
+}
+
+.show{
+
+  opacity:1;
+
+  transform:translateY(0);
+}
+
+
+/* ===========================
+   HERO LOAD ANIMATION
+=========================== */
+
+.hero-content{
+
+  animation:fadeLeft 1s ease forwards;
+
+}
+
+.hero-image{
+
+  animation:fadeRight 1s ease forwards;
+
+}
+
+.hero-buttons{
+
+  animation:fadeUp 1.2s ease forwards;
+
+}
+
+
+@keyframes fadeLeft{
+
+  from{
+
+    opacity:0;
+
+    transform:translateX(-50px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+  }
+
+}
+
+
+@keyframes fadeRight{
+
+  from{
+
+    opacity:0;
+
+    transform:translateX(50px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+  }
+
+}
+
+
+@keyframes fadeUp{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+/* ===========================
+   TYPING CURSOR
+=========================== */
+
+#typing-text::after{
+
+  content:"|";
+
+  margin-left:4px;
+
+  color:var(--primary-color);
+
+  animation:blink .8s infinite;
+
+}
+
+
+@keyframes blink{
+
+  0%,50%{
+
+    opacity:1;
+
+  }
+
+  51%,100%{
+
+    opacity:0;
+
+  }
+
+}
+
+
+/* ===========================
+   FLOATING IMAGE
+=========================== */
+
+.hero-image img{
+
+  animation:float 4s ease-in-out infinite;
+
+}
+
+
+@keyframes float{
+
+  0%{
+
+    transform:translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateY(-15px);
+
+  }
+
+  100%{
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion: reduce){
+
+  *,
+  *::before,
+  *::after{
+
+    animation-duration:0.01ms !important;
+
+    animation-iteration-count:1 !important;
+
+    transition-duration:0.01ms !important;
+
+    scroll-behavior:auto !important;
+
+  }
+
+}

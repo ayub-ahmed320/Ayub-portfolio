@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 620" width="1120" height="620">
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155fc4"/>
+      <stop offset="50%" stop-color="#2f8fe0"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+    <linearGradient id="aGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#e7edf3"/>
+      <stop offset="100%" stop-color="#5cb2ff"/>
+    </linearGradient>
+    <linearGradient id="swooshGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#155fc4"/>
+      <stop offset="55%" stop-color="#2f8fe0"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f8fe0"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="18%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="#0c1e35"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="iconHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2f8fe0" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#2f8fe0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- glow used ONLY on decorative ring/traces, never on text or icon badges -->
+    <filter id="ringGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <pattern id="pixelGrid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#2f8fe0" opacity="0.16"/>
+    </pattern>
+    <pattern id="boardGrid" width="130" height="130" patternUnits="userSpaceOnUse">
+      <path d="M130,0 L0,0 L0,130" fill="none" stroke="#12233c" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1120" height="620" fill="url(#bgGlow)"/>
+  <rect x="0" y="0" width="1120" height="620" fill="url(#boardGrid)" opacity="0.5"/>
+  <rect x="0" y="0" width="1120" height="620" fill="url(#pixelGrid)"/>
+  <ellipse cx="165" cy="170" rx="230" ry="230" fill="url(#iconHalo)"/>
+
+  <!-- ===== MOTHERBOARD TRACES around icon (glow OK here, decorative only) ===== -->
+  <g stroke="url(#ringGrad)" stroke-width="2.5" fill="none" opacity="0.95" stroke-linecap="round" stroke-linejoin="round" filter="url(#ringGlow)">
+    <path d="M18,45 L18,95 L58,95 L58,128"/>
+    <path d="M18,155 L58,155 L58,195"/>
+    <path d="M312,32 L344,32 L344,72 L386,72"/>
+    <path d="M300,332 L300,362 L246,362"/>
+    <path d="M18,300 L18,332 L92,332 L92,362 L142,362"/>
+    <circle cx="18" cy="45" r="5" fill="#8fe6ff"/>
+    <circle cx="58" cy="128" r="5" fill="#8fe6ff"/>
+    <circle cx="58" cy="195" r="5" fill="#8fe6ff"/>
+    <circle cx="386" cy="72" r="5" fill="#8fe6ff"/>
+    <circle cx="246" cy="362" r="5" fill="#8fe6ff"/>
+    <circle cx="142" cy="362" r="5" fill="#8fe6ff"/>
+  </g>
+
+  <!-- ICON: circular ring + A monogram (crisp, no blur on the mark itself) -->
+  <g>
+    <path d="M272.6 105 A130 130 0 0 1 115.6 292.2"
+          fill="none" stroke="url(#swooshGrad)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M47.4 235 A130 130 0 0 1 204.4 47.8"
+          fill="none" stroke="url(#ringGrad)" stroke-width="17" stroke-linecap="round"/>
+
+    <path d="M170 68 L246 270 L204 270 L187 221 L128 221 L142 185 L174 185 L152 127 L90 270 L50 270 Z"
+          fill="url(#aGrad)" stroke="#08131f" stroke-width="1.5"/>
+
+    <path d="M255 205 C 210 235, 150 250, 95 300 C 150 265, 205 250, 245 220 Z" fill="url(#swooshGrad)"/>
+    <path d="M270 190 C 220 228, 155 248, 95 300 C 155 258, 215 240, 258 205 Z" fill="url(#swooshGrad)" opacity="0.9"/>
+
+    <rect x="248" y="59" width="34" height="34" rx="7" fill="url(#dotGrad)"/>
+    <rect x="205" y="97" width="22" height="22" rx="5" fill="url(#dotGrad)" opacity="0.9"/>
+    <rect x="238" y="117" width="26" height="26" rx="5" fill="url(#dotGrad)" opacity="0.95"/>
+    <rect x="196" y="139" width="18" height="18" rx="4" fill="url(#dotGrad)" opacity="0.8"/>
+  </g>
+
+  <!-- divider -->
+  <line x1="335" y1="35" x2="335" y2="295" stroke="#2f8fe0" stroke-width="3" opacity="0.85"/>
+
+  <!-- Wordmark: solid, high-contrast, zero blur -->
+  <g font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" text-anchor="start">
+    <text x="362" y="175" font-size="112" font-weight="900" letter-spacing="1">
+      <tspan fill="#ffffff">AYUB</tspan><tspan fill="#4fa8ff">TECH</tspan>
+    </text>
+    <text x="366" y="217" font-size="25" font-weight="700" fill="#ffffff" letter-spacing="8">SOFTWARE ENGINEER</text>
+    <text x="366" y="248" font-size="19" font-weight="600" font-style="italic" fill="#9cc7f5" letter-spacing="1.5">Build  •  Code  •  Create Value</text>
+    <text x="366" y="278" font-size="19" font-weight="700" fill="#e4ebf2" letter-spacing="1.2">AYUB AHMED — FOUNDER &amp; LEAD ENGINEER</text>
+  </g>
+
+  <!-- circuit traces flanking SOFTWARE ENGINEER -->
+  <g stroke="url(#ringGrad)" stroke-width="2.5" fill="none" opacity="0.95" stroke-linecap="round" stroke-linejoin="round" filter="url(#ringGlow)">
+    <path d="M150,207 L358,207"/>
+    <path d="M150,207 L150,187 L195,187"/>
+    <circle cx="150" cy="207" r="4.5" fill="#8fe6ff"/>
+    <circle cx="195" cy="187" r="4.5" fill="#8fe6ff"/>
+
+    <path d="M772,207 L1000,207"/>
+    <path d="M1000,207 L1000,187 L955,187"/>
+    <circle cx="1000" cy="207" r="4.5" fill="#8fe6ff"/>
+    <circle cx="955" cy="187" r="4.5" fill="#8fe6ff"/>
+  </g>
+
+  <!-- divider before icon row -->
+  <line x1="60" y1="330" x2="1060" y2="330" stroke="#233247" stroke-width="1.5"/>
+  <g stroke="url(#ringGrad)" stroke-width="2.5" fill="none" opacity="0.95" stroke-linecap="round" stroke-linejoin="round" filter="url(#ringGlow)">
+    <path d="M60,330 L60,313 L124,313"/>
+    <path d="M1060,330 L1060,313 L996,313"/>
+    <circle cx="124" cy="313" r="4.5" fill="#8fe6ff"/>
+    <circle cx="996" cy="313" r="4.5" fill="#8fe6ff"/>
+  </g>
+
+  <!-- vertical separators between icon groups -->
+  <g stroke="#2a3b52" stroke-width="1.5">
+    <line x1="280" y1="375" x2="280" y2="545"/>
+    <line x1="500" y1="375" x2="500" y2="545"/>
+    <line x1="720" y1="375" x2="720" y2="545"/>
+  </g>
+
+  <!-- ICON BADGE 1: BUILD -->
+  <g transform="translate(170,455)">
+    <polygon points="0,-56 48.5,-28 48.5,28 0,56 -48.5,28 -48.5,-28" fill="#081422" stroke="url(#ringGrad)" stroke-width="3"/>
+    <polygon points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="none" stroke="#4fa8ff" stroke-width="1" opacity="0.55"/>
+    <text x="0" y="10" font-size="30" font-weight="700" font-family="Consolas, 'Courier New', monospace" fill="#7fe0ff" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+  <text x="170" y="535" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="Arial, sans-serif">BUILD</text>
+  <text x="170" y="555" font-size="13" fill="#a9b8c9" text-anchor="middle" letter-spacing="1" font-family="Arial, sans-serif">SOLID SOLUTIONS</text>
+
+  <!-- ICON BADGE 2: CODE -->
+  <g transform="translate(390,455)">
+    <polygon points="0,-56 48.5,-28 48.5,28 0,56 -48.5,28 -48.5,-28" fill="#081422" stroke="url(#ringGrad)" stroke-width="3"/>
+    <polygon points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="none" stroke="#4fa8ff" stroke-width="1" opacity="0.55"/>
+    <rect x="-26" y="-22" width="52" height="42" rx="5" fill="none" stroke="#4fa8ff" stroke-width="2.5"/>
+    <line x1="-26" y1="-9" x2="26" y2="-9" stroke="#4fa8ff" stroke-width="2"/>
+    <circle cx="-18" cy="-15.5" r="2.2" fill="#7fe0ff"/>
+    <circle cx="-11" cy="-15.5" r="2.2" fill="#7fe0ff"/>
+    <circle cx="-4" cy="-15.5" r="2.2" fill="#7fe0ff"/>
+    <text x="0" y="14" font-size="16" font-weight="700" font-family="Consolas, 'Courier New', monospace" fill="#7fe0ff" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+  <text x="390" y="535" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="Arial, sans-serif">CODE</text>
+  <text x="390" y="555" font-size="13" fill="#a9b8c9" text-anchor="middle" letter-spacing="1" font-family="Arial, sans-serif">CLEAN &amp; EFFICIENT</text>
+
+  <!-- ICON BADGE 3: CREATE -->
+  <g transform="translate(610,455)">
+    <polygon points="0,-56 48.5,-28 48.5,28 0,56 -48.5,28 -48.5,-28" fill="#081422" stroke="url(#ringGrad)" stroke-width="3"/>
+    <polygon points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="none" stroke="#4fa8ff" stroke-width="1" opacity="0.55"/>
+    <g fill="#7fe0ff">
+      <path d="M0,-32 C13,-19 15,5 8,21 L-8,21 C-15,5 -13,-19 0,-32 Z"/>
+      <circle cx="0" cy="-11" r="4.4" fill="#081422"/>
+      <path d="M-8,21 L-19,34 L-8,29 Z"/>
+      <path d="M8,21 L19,34 L8,29 Z"/>
+      <path d="M-4,26 L0,38 L4,26 Z"/>
+    </g>
+  </g>
+  <text x="610" y="535" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="Arial, sans-serif">CREATE</text>
+  <text x="610" y="555" font-size="13" fill="#a9b8c9" text-anchor="middle" letter-spacing="1" font-family="Arial, sans-serif">INNOVATIVE IMPACT</text>
+
+  <!-- ICON BADGE 4: VALUE -->
+  <g transform="translate(830,455)">
+    <polygon points="0,-56 48.5,-28 48.5,28 0,56 -48.5,28 -48.5,-28" fill="#081422" stroke="url(#ringGrad)" stroke-width="3"/>
+    <polygon points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="none" stroke="#4fa8ff" stroke-width="1" opacity="0.55"/>
+    <g fill="#7fe0ff">
+      <rect x="-26" y="8" width="10" height="18"/>
+      <rect x="-8" y="-3" width="10" height="29"/>
+      <rect x="10" y="-16" width="10" height="42"/>
+    </g>
+    <path d="M-26,-11 L24,-32" stroke="#7fe0ff" stroke-width="2.5" fill="none"/>
+    <polygon points="24,-32 12,-30 21,-22" fill="#7fe0ff"/>
+  </g>
+  <text x="830" y="535" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2" font-family="Arial, sans-serif">VALUE</text>
+  <text x="830" y="555" font-size="13" fill="#a9b8c9" text-anchor="middle" letter-spacing="1" font-family="Arial, sans-serif">DRIVE RESULTS</text>
+
+  <!-- circuit traces flanking icon row edges -->
+  <g stroke="url(#ringGrad)" stroke-width="2.5" fill="none" opacity="0.95" stroke-linecap="round" stroke-linejoin="round" filter="url(#ringGlow)">
+    <path d="M1000,405 L1050,405 L1050,445 L1090,445"/>
+    <path d="M1000,485 L1060,485"/>
+    <circle cx="1050" cy="445" r="4.5" fill="#8fe6ff"/>
+    <circle cx="1060" cy="485" r="4.5" fill="#8fe6ff"/>
+    <path d="M120,405 L70,405 L70,445 L30,445"/>
+    <path d="M120,485 L60,485"/>
+    <circle cx="70" cy="445" r="4.5" fill="#8fe6ff"/>
+    <circle cx="60" cy="485" r="4.5" fill="#8fe6ff"/>
+  </g>
+</svg>

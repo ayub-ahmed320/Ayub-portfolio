@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" width="460" height="100">
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155fc4"/>
+      <stop offset="50%" stop-color="#2f8fe0"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+    <linearGradient id="aGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#e7edf3"/>
+      <stop offset="100%" stop-color="#5cb2ff"/>
+    </linearGradient>
+    <linearGradient id="swooshGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#155fc4"/>
+      <stop offset="55%" stop-color="#2f8fe0"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f8fe0"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ICON MARK (scaled down, crisp - no blur) -->
+  <g transform="translate(6,4) scale(0.275)">
+    <path d="M272.6 105 A130 130 0 0 1 115.6 292.2"
+          fill="none" stroke="url(#swooshGrad)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M47.4 235 A130 130 0 0 1 204.4 47.8"
+          fill="none" stroke="url(#ringGrad)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M170 68 L246 270 L204 270 L187 221 L128 221 L142 185 L174 185 L152 127 L90 270 L50 270 Z"
+          fill="url(#aGrad)" stroke="#08131f" stroke-width="2.5"/>
+    <path d="M255 205 C 210 235, 150 250, 95 300 C 150 265, 205 250, 245 220 Z" fill="url(#swooshGrad)"/>
+    <path d="M270 190 C 220 228, 155 248, 95 300 C 155 258, 215 240, 258 205 Z" fill="url(#swooshGrad)" opacity="0.9"/>
+    <rect x="248" y="59" width="34" height="34" rx="7" fill="url(#dotGrad)"/>
+    <rect x="205" y="97" width="22" height="22" rx="5" fill="url(#dotGrad)" opacity="0.9"/>
+    <rect x="238" y="117" width="26" height="26" rx="5" fill="url(#dotGrad)" opacity="0.95"/>
+    <rect x="196" y="139" width="18" height="18" rx="4" fill="url(#dotGrad)" opacity="0.8"/>
+  </g>
+
+  <!-- WORDMARK: solid colors, zero blur, maximum legibility -->
+  <text x="112" y="66" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="48" font-weight="900" letter-spacing="0.5">
+    <tspan fill="#ffffff">AYUB</tspan><tspan fill="#4fa8ff">TECH</tspan>
+  </text>
+</svg>
